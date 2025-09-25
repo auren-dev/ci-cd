@@ -16,6 +16,7 @@ on:
 jobs:
   # test라는 Job
   kimcode-test:
+    name: kimcode-test
     # GitHub이 제공하는 최신 Ubuntu 환경에서 실행됨
     runs-on: ubuntu-latest
 
