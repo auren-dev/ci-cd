@@ -41,5 +41,5 @@ jobs:
             npm install
             npm run build
             # npm run prisma:migrate # 예: prisma migrate deploy로 마이그레이션 적용하기
-            pm2 reload app # PM2로 재실행
-            echo "Deployment successful!"
+            npm run start:prod # PM2로 재실행
+            echo "✅ Deployment successful!"
