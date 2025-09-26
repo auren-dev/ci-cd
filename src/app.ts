@@ -21,4 +21,9 @@ app.get('/hi', (req, res) => {
     res.json({ message: result })
 })
 
+app.get('/bye', (req, res) => {
+    const name = req.query?.name?.toString() || 'Unknown'
+    res.json({ message: `Bye, ${name}` })
+})
+
 app.listen(PORT, () => console.log(`🚀 API Server Started on :${PORT}`))
