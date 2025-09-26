@@ -1,4 +1,6 @@
+import './config/sentry'
 import express from 'express'
+import * as Sentry from '@sentry/node'
 import helloController from './hello.js'
 
 const PORT = process.env?.PORT || 3000
@@ -25,5 +27,11 @@ app.get('/bye', (req, res) => {
     const name = req.query?.name?.toString() || 'Unknown'
     res.json({ message: `Bye, ${name}` })
 })
+
+app.get('/debug-sentry', (req, res) => {
+    throw new Error('My first Sentry error!')
+})
+
+Sentry.setupExpressErrorHandler(app)
 
 app.listen(PORT, () => console.log(`🚀 API Server Started on :${PORT}`))
