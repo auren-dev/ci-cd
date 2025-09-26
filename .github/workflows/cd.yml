@@ -9,7 +9,7 @@ on:
 
 # 작업
 jobs:
-	# job 커스텀 이름
+  # job 커스텀 이름
   deploy:
     # 실행 환경
     runs-on: ubuntu-latest
