@@ -9,13 +9,10 @@ on:
 
 # 작업
 jobs:
-	# job 커스텀 이름
-  deploy:
-    # 실행 환경
-    runs-on: ubuntu-latest
+  deploy:                   # job 커스텀 이름
+    runs-on: ubuntu-latest  # 실행 환경
     
-    # 세부 단계
-    steps:
+    steps:                  # 세부 단계
       # 코드 Checkout
       - name: Checkout code
         uses: actions/checkout@v5
