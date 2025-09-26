@@ -1,9 +1,12 @@
 import express from 'express'
+import log from './middlewares/log'
 import helloController from './hello.js'
 
 const PORT = process.env?.PORT || 3000
 
 const app = express()
+
+app.use(log)
 
 app.get('/health', (_req, res) => {
     res.status(200).send({ message: 'OK' })
