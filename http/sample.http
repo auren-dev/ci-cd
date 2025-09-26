@@ -11,3 +11,11 @@ GET http://15.164.224.44:80/health
 ###
 
 GET http://ec2-15-164-224-44.ap-northeast-2.compute.amazonaws.com:80/bye
+
+###
+
+GET http://localhost:3000/debug-sentry
+
+###
+
+GET http://ec2-15-164-224-44.ap-northeast-2.compute.amazonaws.com:80/debug-sentry
