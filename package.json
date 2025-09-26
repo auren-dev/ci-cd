@@ -11,6 +11,7 @@
     "start:prod": "pm2 reload ecosystem.config.js --env production"
   },
   "dependencies": {
+    "@sentry/node": "^10.15.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
